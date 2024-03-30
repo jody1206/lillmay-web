@@ -1,0 +1,257 @@
+* 
+  position: relative
+  box-sizing: border-box
+
+html
+  font-size: calc(16px / 1.6)
+  +media(lg)
+    font-size: calc(15px / 1.6)
+  +media(ipad)
+    font-size: calc(14px / 1.6)
+
+html
+  &.lenis, &.lenis body
+    height: auto
+.lenis.lenis
+  &-smooth
+    scroll-behavior: auto !important
+  &-smooth [data-lenis-prevent]
+    overscroll-behavior: contain
+  &-stopped
+    overflow: hidden
+  &-scrolling iframe
+    pointer-events: none
+
+body
+  margin: 0
+  background-color: var(--color-white)
+  font-size: 1.6rem
+  font-family: 'Noto Sans TC', sans-serif
+  font-weight: 400
+  letter-spacing: 0.1rem
+  line-height: 1.7
+  -webkit-font-smoothing: antialiased
+  color: var(--color-secondary)
+  
+   
+a
+  padding: 0.6rem
+
+a, button, input, label, select, textarea
+  // 防止手機雙點擊螢幕放大縮小
+  -ms-touch-action: manipulation
+  touch-action: manipulation
+
+a, button
+  display: inline-block
+  text-decoration: none
+  color: inherit
+  // 禁止文字反白
+  user-select: none
+  &:hover
+    text-decoration: none
+    color: inherit
+// a:hover
+
+button
+  padding: 0
+  border: none
+  background: none
+
+img
+  max-width: 100%
+
+ul
+  list-style: none
+  padding: 0
+  margin: 0
+  text-decoration: none
+
+h1, h2, h3, h4, h5, h6, p, button
+  margin: 0
+  // 插件可能會影響
+  font-family: inherit
+  font-size: inherit
+  font-weight: inherit
+  line-height: inherit
+  color: inherit
+
+span
+  display: block
+  // 插件可能會影響
+  line-height: inherit
+
+
+.l-lineup
+  padding: 8rem
+  border-bottom: 24px solid var(--color-secondary-mid-20)
+  margin-bottom: 2rem
+  &__wrap:not(:last-child) &__img-mask
+    padding-right: var(--spacing-24)
+    
+ 
+  &__textwrap  
+    max-width: 152rem 
+    display: flex
+    justify-content: center
+    align-items: center
+    text-align: center
+      
+ 
+
+ 
+    
+.l-about
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  margin: -0.2rem 0 0 0rem 
+  +media(xl)
+      display: flex
+      flex-wrap: wrap
+  &__article-wrap
+    float: right
+    margin-top: 8rem
+    padding: 8rem
+    +media(xl)
+      margin: 4rem 0 4rem
+      padding: 4rem
+  &__img-mask
+    max-width: 100%
+    margin-top: 16rem
+    +media(xl)
+      width: 100%
+      margin-top: 8rem
+
+
+   
+.l-reviews
+  &__slide
+    height: auto
+  &__btn-swiper
+    position: absolute
+    top: 50%
+    padding: var(--spacing-16)
+    background-color: var(--color-gray-light)
+    font-size: 1.8rem
+    color: var(--color-secondary)
+    z-index: 10
+    &.--prev
+      left: 0
+      border-radius: 0 var(--spacing-16) var(--spacing-16) 0
+    &.--next
+      right: 0
+      border-radius: var(--spacing-16) 0 0 var(--spacing-16)
+    
+.c-card
+  width: 100%
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2)
+  background-color: var(--color-white) 
+  padding: 4rem
+  position: relative
+  justify-content: center
+  border-radius: 2rem
+  &__img-mask
+    margin: 2rem
+    +media(xl)
+      margin: 0
+  &__wrap-title
+    font-size: 2.4rem
+    color: var(--color-white)
+    margin: 4rem 2rem 4rem 2rem
+    background-color: var(--color-primary)
+    border-radius: 1rem
+    padding: 1rem
+    max-width: 60%
+  &__wrap-text
+    margin: 2rem
+    display: flex
+    flex-wrap: wrap
+
+
+.l-product
+  max-width: 100%  
+  &__bcg-img
+    position: absolute
+    left: 0
+    bottom: -1rem
+    z-index: 1
+    max-width: 100%
+    margin: 0
+  &__img-mask
+    width: 40% 
+    margin-top: 16rem
+    z-index: 2
+  &__text
+    position: absolute
+    right: 8rem
+    top: 20rem
+    +media(md)
+      position: absolute
+      right: 2rem
+      top: 8rem
+    
+    
+    
+.buynow-bottom
+  &__btn-box
+    background-color: var(--color-primary)
+    border-radius: 10rem
+    padding: 2rem 4rem 
+    width: 65%
+    position: absolute
+    right: 12rem
+    bottom: 10rem
+    &:hover
+      color: var(--color-primary)
+      background-color: none
+    +media(md)
+      color: var(--color-primary)
+      border-radius: 4rem
+      width: 56%
+      position: absolute
+      right: 4rem
+      bottom: 6rem
+      padding: 0.8rem 1rem
+
+  
+footer
+  bottom: 0
+  background-color: var(--color-white)
+  padding: 4rem
+  display: flex
+  justify-content: space-between
+  text-decoration: none
+  list-style: none
+  
+section
+  padding: var(--spacing-120) 4vw
+
+.container
+  --section-width: 100vw
+  --container-width: 152rem
+  max-width: var(--container-width)
+  &.--both
+    margin-left: -4vw  
+    margin-right: -4vw
+    padding: 0
+    width: auto
+    // max-width: calc(152rem + 4vw + 50vw - 4vw - 152rem / 2 - (var(--bs-gutter-x) * .5))
+    // 畫面一半 + container 最大寬的一半 - container 預設 padding
+    max-width: calc(var(--section-width) / 2 + var(--container-width) / 2 - var(--bs-gutter-x) * .5)
+
+    
+
+.row
+  &.--gap
+    --bs-gutter-x: var(--spacing-32)
+    --bs-gutter-y: var(--spacing-32)
+  &.--gap-md
+    --bs-gutter-x: var(--spacing-40)
+    --bs-gutter-y: var(--spacing-80)
+  &.--gap-lg
+    --bs-gutter-x: var(--spacing-64)
+    --bs-gutter-y: var(--spacing-88)   
+
+
+  

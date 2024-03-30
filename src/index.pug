@@ -1,0 +1,204 @@
+doctype html
+html(lang="en")
+  head
+    include includes/_settings.pug
+    include includes/_head.pug
+    
+
+  body 
+    
+    header.l-header
+      .l-header__logo-mask(href="index.html")
+        img(src="img/logo/logo.png", alt="lillmay Logo")
+
+      .l-header__banner-wrap
+        .l-header__banner
+          .l-header__img-mask
+            img.u-object-fit.js-lazy(data-src="img/banner/banner.png", alt="careplus powder")
+
+          h3.u-text-3xl.u-color-white.u-mb-80 麗兒媄
+            br
+            | 用守護家人的心，守護您！
+
+          nav.l-navbar 
+            .l-navbar__menu.u-text-3xl MENU 
+            ul.l-navbar__btn-box 
+              li.l-navbar__btn-wrap 
+                a.l-navbar__btn(href="#section1") 關於產品
+            ul.l-navbar__btn-box 
+              li.l-navbar__btn-wrap 
+                a.l-navbar__btn(href="#fivespecial") 五大亮點
+            ul.l-navbar__btn-box 
+              li.l-navbar__btn-wrap 
+                a.l-navbar__btn(href="#reviews") 顧客評價
+            ul.l-navbar__btn-box 
+              li.l-navbar__btn-wrap 
+                a.l-navbar__btn(href="#buynow") 立即購買
+
+        nav.nav-bottom
+          ul.nav-bottom__btn-box 
+            li.nav-bottom__btn-wrap 
+               a.nav-bottom__btn.u-color-primary(href="https://www.lillmay.com/") 前往官網>
+
+        h1.u-text-3xl.l-header__title CarePlus+
+          br
+          span.u-inline.u-fw-700 蔬果酵素|膠原蛋白
+          span.u-inline (助消化型)
+      
+    
+    main 
+      section#section1.l-lineup
+        .l-lineup__textwrap
+          h2.u-fw-400.u-color-primary.u-text-lg.u-mt-40 關於產品
+            span.u-fw-400.u-color-primary.u-text-md.u-mt-40 About Product
+              span.u-text-sm.u-color-secondary.u-mt-40 我們希望享受美味食物的同時，也能有健康與美麗的生活
+              span.u-text-sm.u-color-secondary.u-mt-8 用守護家人的心，守護你！
+      .container-fluid.p-0
+        .row.g-0
+          .col-lg-4.l-lineup__wrap
+            .l-lineup__img-mask
+              img.u-object-fit.js-lazy(data-src="img/photo/Rectangle 10.png", alt="careplus picture")
+          .col-lg-4.l-lineup__wrap  
+            .l-lineup__img-mask
+              img.u-object-fit.js-lazy(data-src="img/photo/Rectangle 11.png", alt="careplus children")
+          .col-lg-4.l-lineup__wrap  
+            .l-lineup__img-mask
+              img.u-object-fit.js-lazy(data-src="img/photo/Rectangle 12.png", alt="careplus picture2")
+
+      .container
+        .row.--gap-md
+          .l-about
+            .col-xl-6.l-about__img-mask
+              img.js-lazy(data-src="img/photo/careplus2.png", alt="careplus product")
+            .col-xl-6.l-about__article-wrap 
+              h3#fivespecial.u-text-xl.u-color-primary CarePlus+ 5大亮點  
+              span.u-text-sm.u-color-secondary.u-mt-24 1. 高達76種蔬果的酵素，有助於加速食物的分解
+              span.u-text-sm.u-color-secondary.u-mt-24 2. 超高活性酵素，更能有效分解
+              span.u-text-sm.u-color-secondary.u-mt-24 3. 添加獨家膠原蛋白，有助養顏美容
+              span.u-text-sm.u-color-secondary.u-mt-24 4. 無添加不擔心，經過相關檢驗
+              span.u-text-sm.u-color-secondary.u-mt-24 5. 美味好攜帶，天天一包輕鬆顧健康！
+        
+      .u-bg
+        section#reviews.l-reviews
+          .l-reviews__btn-swiper.--prev
+            iconify-icon.icon(icon="fa6-solid:arrow-left")
+          .l-reviews__btn-swiper.--next
+            iconify-icon.icon(icon="fa6-solid:arrow-right")
+
+          .container
+            .swiper.l-reviews__swiper
+              .swiper-wrapper
+                .swiper-slide
+                  article.c-card
+                    .c-card__img-mask
+                      img.u-object-fit.js-lazy(data-src="img/photo/cardimg.jpg", alt="girl picture")
+                    .c-card__wrap
+                      h3.c-card__wrap-title.u-text-xl 顧客評價-YIN 
+                      h4.c-card__wrap-text.u-text-sm.u-color-secondary.u-mt-24 有了『RElife膠原蛋白胜肽複方』，來加強攝取補充，此款不會有腥味，會飄散出的陣陣果香，可以輕鬆讓我養成食用的習慣。
+                .swiper-slide
+                  article.c-card
+                    .c-card__img-mask 
+                      img.u-object-fit.js-lazy(data-src="img/photo/reviews2.png", alt="girl picture")
+                    .c-card__wrap
+                      h3.c-card__wrap-title.u-text-xl 顧客評價-SIANG 
+                      h4.c-card__wrap-text.u-text-sm.u-color-secondary.u-mt-24 為了可以當美美的媽咪，我每天早晚都會吃麗兒媄的膠原蛋白！每包分量都很足夠，對我常常照顧小孩熬夜的皮膚和哺乳的胸部都很有幫助呢！
+                .swiper-slide
+                  article.c-card
+                    .c-card__img-mask 
+                      img.u-object-fit.js-lazy(data-src="img/photo/reviews3.png", alt="girl picture")
+                    .c-card__wrap
+                      h3.c-card__wrap-title.u-text-xl 顧客評價-ELLE 
+                      h4.c-card__wrap-text.u-text-sm.u-color-secondary.u-mt-24 過了三十歲～生完小孩又每天熬夜應酬，超級怕狀態不佳失去彈性！養成習慣喝再醉都記得吃麗兒媄，讓我可以保持最佳狀態！
+                .swiper-slide
+                  article.c-card
+                    .c-card__img-mask
+                      img.u-object-fit.js-lazy(data-src="img/photo/cardimg.jpg", alt="girl picture")
+                    .c-card__wrap
+                      h3.c-card__wrap-title.u-text-xl 顧客評價-FIN 
+                      h4.c-card__wrap-text.u-text-sm.u-color-secondary.u-mt-24 有了『RElife膠原蛋白胜肽複方』，來加強攝取補充，此款不會有腥味，會飄散出的陣陣果香，可以輕鬆讓我養成食用的習慣。      
+                
+
+        .l-cus-text
+          span.u-inline.u-fw-900.u-color-white.u-text-4xl CUSTOMER REVIEWS
+
+
+        .l-product#buynow 
+          .l-product__bcg-img
+            img.u-object-fit.js-lazy(data-src="img/photo/wavebcg.png", alt="background") 
+          .l-product__img-mask 
+            img.u-object-fit.js-lazy(data-src="img/photo/careplusproduct.png", alt="product")
+          .l-product__text.u-inline.u-fw-900.u-color-white.u-text-2xl KEEP HEALTHY & BEAUTIFUL
+            .buynow-bottom
+              ul.buynow-bottom__btn-box 
+                li.buynow-bottom__btn-wrap 
+                  a.buynow-bottom__btn.u-color-white.u-text-2xl(href="https://www.lillmay.com/product-page/careplus-%E8%94%AC%E6%9E%9C%E9%85%B5%E7%B4%A0-%E8%86%A0%E5%8E%9F%E8%9B%8B%E7%99%BD%E8%83%9C%E8%82%BD") 前往官網購買
+
+    footer 
+      ul.l-footer__btnspan-box
+          li.l-footer__btnspan-wrap
+            a.l-footer__btnspan(href="https://lin.ee/przZjCi" target="_blank") CONTACT US 
+          li.l-footer__btnspan-wrap
+            a.l-footer__btnspan(href="https://www.lillmay.com/" target="_blank") COMPANY 
+          li.l-footer__btnspan-wrap
+            a.l-footer__btnspan(href="https://www.lillmay.com/general-5" target="_blank") MORE QUESTION 
+
+      ul.l-footer__btn-box.--icon
+        li.l-footer__btn-wrap
+          a.l-footer__btn(href="https://m.facebook.com/p/%E9%BA%97%E5%85%92%E5%AA%84Lillmay-100063881957974/" target="_blank")
+            iconify-icon.u-icon.--md(icon="mingcute:facebook-line")
+        li.l-footer__btn-wrap
+          a.l-footer__btn(href="https://www.instagram.com/lillmay_re/?r=nametag" target="_blank")
+            iconify-icon.u-icon.--md(icon="mingcute:ins-line")
+        li.l-footer__btn-wrap
+          a.l-footer__btn(href="https://www.youtube.com/@Lillmay/about" target="_blank")
+            iconify-icon.u-icon.--md(icon="mingcute:youtube-line")
+
+    
+    //- 插件使用流程 -> 引入 js -> 引入 css -> 初始化
+    script(src="js/lazyload.min.js")
+    script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js", integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ", crossorigin="anonymous")
+    script(src="js/lenis.min.js")
+    script(src="js/swiper.min.js")
+    script(src="js/main.min.js")
+
+    script.
+      const headerSwiper = new Swiper('.l-header__swiper', {
+        effect: 'fade',
+        // 施放距離
+        longSwipesRatio: 0.1,
+        loop: true,
+        speed: 1200,
+        autoplay: {
+          delay: 3000,
+          // 手動換頁之後停止自動輪播
+          // false 手動之後還是會自動輪播
+          disableOnInteraction: false
+        }
+      });
+
+      const newsSwiper = new Swiper('.l-reviews__swiper', {
+        longSwipesRatio: 0.1,
+        loop: true,
+        speed: 1200,
+        slidesPerView: 'auto',
+        spaceBetween: 3,
+        breakpoints: {
+          1400: {
+            slidesPerView: 3,
+            spaceBetween: 16,
+          },
+          1024: {
+            slidesPerView: 2,
+            spaceBetween: 8,
+          },
+          576: {
+            slidesPerView: 1,
+            spaceBetween: 4,
+          },
+        },    
+        navigation: {
+          prevEl: '.l-reviews__btn-swiper.--prev',
+          nextEl: '.l-reviews__btn-swiper.--next',
+        },
+      })
+     

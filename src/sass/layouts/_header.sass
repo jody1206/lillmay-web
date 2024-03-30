@@ -1,0 +1,33 @@
+.l-header
+    padding: var(--spacing-80) 0 var(--spacing-72)
+    background-image: linear-gradient(30deg, transparent, var(--color-secondary-mid-20),transparent)
+
+    &__logo-mask
+        width: 16rem
+        position: absolute
+        left: 0
+        top: 0
+        +media(md)
+            width: 12rem
+        +media(xs)
+            width: 8rem
+    &__banner-wrap
+        max-width: 90%
+        margin-left: auto
+    &__banner
+        padding: var(--spacing-80) 4vw 0
+    &__img-mask
+        position: absolute
+        left: 0
+        top: 0
+        +size(100%)
+        background-color: var(--color-white)
+        border-top-left-radius: var(--spacing-80)
+        overflow: hidden
+    &__title
+        padding-left: 4vw
+        margin-top: var(--spacing-80)
+        color: var(--color-primary)
+
+
+

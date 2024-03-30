@@ -1,0 +1,15 @@
+doctype html
+html(lang="en")
+  head
+    include includes/_settings.pug
+    -
+      path = '/about.html'
+      pageTitle = '關於產品';
+      infoTitle = '我們希望享受美味食物的同時，也能有健康與美麗的生活用守護家人的心，守護你！';
+      description = '高達76種蔬果的酵素，有助於加速食物的分解';
+      image = 'img/og/og-about.jpg';
+
+    include includes/_head.pug
+
+  body 
+    include includes/_navbar.pug
